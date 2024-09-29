@@ -70,3 +70,16 @@ inputs.forEach((input) => {
         notEmpty()
     })
 })
+
+const passwordInput = document.getElementById('password');
+        const showPasswordBtn = document.getElementById('showPassword');
+
+        passwordInput.addEventListener('input', () => {
+            showPasswordBtn.style.display = passwordInput.value ? 'block' : 'none';
+        });
+
+        showPasswordBtn.addEventListener('click', () => {
+            const isPasswordVisible = passwordInput.type === 'text';
+            passwordInput.type = isPasswordVisible ? 'password' : 'text';
+            showPasswordBtn.textContent = isPasswordVisible ? 'Show' : 'Hide';
+        });

@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
-:root
-{
+:root {
     --primary-color: rgb(255, 255, 255);
     --accent-color: rgb(87, 157, 47);
     --gray: rgb(213, 213, 213);
@@ -25,7 +24,7 @@ body {
     user-select: none;
 }
 
-main{
+main {
     height: 100%;
     width: 100%;
     display: flex;
@@ -41,22 +40,19 @@ main{
 }
 
 @keyframes open {
-    0%
-    {
+    0% {
         height: 0;
         width: 0;
     }
 
-    100% 
-    {
+    100% {
         height: 100%;
         width: 100%;
         display: flex;
-    }   
+    }
 }
 
-
-.bg{
+.bg {
     height: 100%;
     width: 100%;
     border-radius: 36px;
@@ -64,7 +60,7 @@ main{
     box-shadow: 0px 0px 0px 20px var(--primary-color);
 }
 
-.logo{
+.logo {
     position: absolute;
     left: 50%;
     top: 50%;
@@ -75,21 +71,17 @@ main{
     z-index: 100;
 }
 
-
 @keyframes logoAnimations {
-    0%
-    {
+    0% {
         opacity: 1;
         transform: rotate(0deg);
     }
 
-    50%
-    {
+    50% {
         background-color: transparent;
     }
-    
-    100%
-    {
+
+    100% {
         top: 0px;
         left: 40px;
         transform: rotate(360deg);
@@ -99,24 +91,20 @@ main{
 }
 
 @keyframes logoAnimationsEnd {
-    0%
-    {
+    0% {
         top: -30px;
         left: 20px;
         transform: rotate(0deg);
     }
-    
-    100%
-    {
+
+    100% {
         transform: rotate(360deg) translate(-50%, -50%);
         left: 50%;
         top: 50%;
     }
 }
 
-/* *--------------------login----------------------- */
-
-.loginSectionsContainer{
+.loginSectionsContainer {
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
@@ -129,42 +117,40 @@ main{
     z-index: 1;
 }
 
-/* *--------------------nav----------------------- */
-nav{
+nav {
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.logoImg{
-    width: 100px;
+.logoImg {
+    width: 80px;
 }
 
-
-.navLogo{
+.navLogo {
     display: flex;
     align-items: center;
 }
 
-.navUl{
+.navUl {
     display: flex;
     align-items: center;
     gap: 1rem;
     list-style: none;
 }
 
-.navLi{
+.navLi {
     animation: transformLeft var(--time-slow) both;
 }
 
-.navLi:first-of-type{
+.navLi:first-of-type {
     color: gray;
     user-select: none;
     cursor: pointer;
 }
 
-.navLi:last-of-type{
+.navLi:last-of-type {
     padding: 10px;
     border-radius: 36px;
     color: var(--accent-color);
@@ -172,7 +158,7 @@ nav{
     font-weight: 550;
 }
 
-.name{
+.name {
     overflow: hidden;
 }
 
@@ -195,11 +181,10 @@ nav{
 }
 
 .enroll:hover .dropdown-content {
-    display: block; 
+    display: block;
 }
 
-
-.dropdownUl{
+.dropdownUl {
     list-style: none;
     line-height: 2rem;
     font-size: 0.9rem;
@@ -207,14 +192,13 @@ nav{
     color: white;
 }
 
-
-.dropdownLi{
+.dropdownLi {
     display: flex;
     align-items: center;
     gap: 0.5rem;
 }
 
-.dropdownLi div{
+.dropdownLi div {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -226,54 +210,50 @@ nav{
 }
 
 @keyframes transformLeft {
-    from{
+    from {
         transform: translateX(100%);
-    }    
+    }
 
-    to{
+    to {
         transform: translateX(-2px);
     }
 }
 
 @keyframes transformRight {
-    from{
+    from {
         transform: translateX(-100%);
-    }    
+    }
 
-    to{
+    to {
         transform: translateX(0);
     }
 }
 
-/* !------------------nav-over-------------------- */
-
-/* *--------------------form----------------------- */
-
-.loginFormContainer{
+.loginFormContainer {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
     height: 60%;
     width: 60%;
-    gap: 1rem;    
+    gap: 1rem;
     z-index: inherit;
     animation: slideUp var(--time-fast) both;
 }
 
-.heading{
+.heading {
     text-align: center;
 }
 
-.heading h1{
+.heading h1 {
     font-size: 3vmax;
 }
 
-.heading p{
+.heading p {
     font-size: 1vmax;
 }
 
-.loginForm{
+.loginForm {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -281,7 +261,7 @@ nav{
     gap: 1rem;
 }
 
-.singleInpt{
+.singleInpt {
     position: relative;
     width: 100%;
     border-radius: 12px;
@@ -289,8 +269,18 @@ nav{
     padding: 25px 10px 10px 10px;
     justify-content: end;
 }
+.showPassword {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 0.8rem;
+    color: gray;
+    cursor: pointer;
+    display: none;
+}
 
-.inptLabel{
+.inptLabel {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -298,7 +288,7 @@ nav{
     transition: var(--time-fast);
 }
 
-.inpts{
+.inpts {
     height: 25px;
     width: 100%;
     padding-left: 10px;
@@ -320,7 +310,7 @@ nav{
     top: 30%;
 }
 
-.loginBtn{
+.loginBtn {
     padding: 20px;
     height: 60px;
     border-radius: 36px;
@@ -330,27 +320,28 @@ nav{
     position: relative;
 }
 
-.loading{
+.loading {
     width: 1rem;
     position: absolute;
     display: none;
 }
 
-.loadingAnime{
+.loadingAnime {
     display: block !important;
     animation: loading var(--time-fast) both;
 }
 
-.loginPAnime{
+.loginPAnime {
     animation: pRight var(--time-fast) both;
 }
 
-@keyframes loading{
-    from{
+@keyframes loading {
+    from {
         left: 0;
         display: block;
     }
-    to{
+
+    to {
         left: 50%;
         transform: translateX(-50%);
     }
@@ -360,23 +351,24 @@ nav{
     from {
         display: block;
     }
-    to{
+
+    to {
         display: none;
         transform: translateX(100%);
     }
 }
 
-.active{
+.active {
     background-color: var(--accent-color);
 }
 
-.checkboxContainer{
+.checkboxContainer {
     display: flex;
     align-items: center;
     gap: 0.2rem;
 }
 
-.checkboxContainer input{
+.checkboxContainer input {
     width: 30px;
     height: 30px;
     border-radius: 30%;
@@ -385,19 +377,21 @@ nav{
     -webkit-appearance: none;
     -moz-appearance: none;
 }
-.checkboxContainer input:checked{
-    border-color: var(--accent-color); 
+
+.checkboxContainer input:checked {
+    border-color: var(--accent-color);
 }
-.checkboxContainer input:checked::before{
-    content: '\2714'; 
-    display: block;   
-    color: var(--accent-color); 
+
+.checkboxContainer input:checked::before {
+    content: '\2714';
+    display: block;
+    color: var(--accent-color);
     font-size: 1rem;
     text-align: center;
     line-height: 20px;
 }
 
-.forgotPassword{
+.forgotPassword {
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -407,11 +401,7 @@ nav{
     color: var(--accent-color);
 }
 
-/* !------------------form-over-------------------- */
-
-
-/* *--------------------footer----------------------- */
-.foots{
+.foots {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -421,57 +411,46 @@ nav{
     animation: slideUp var(--time-fast) both;
 }
 
-.foots:last-of-type p:last-of-type{
+.foots:last-of-type p:last-of-type {
     color: var(--accent-color);
 }
-/* !------------------footer-over-------------------- */
 
-/* !------------------login-over-------------------- */
-
-@keyframes slideUp{
-    0%
-    {
+@keyframes slideUp {
+    0% {
         display: none;
         opacity: 0;
         transform: translateY(100%);
-    }   
+    }
 
-    50%
-    {
+    50% {
         display: none;
         opacity: 0;
     }
 
-    100%
-    {
+    100% {
         display: flex;
         transform: translateY(0);
     }
 }
 
-@keyframes appearRight {   
-    0%
-    {
+@keyframes appearRight {
+    0% {
         width: 0;
         display: none;
     }
 
-    100%
-    {
+    100% {
         width: 100%;
         display: flex;
-    }    
+    }
 }
 
-
-@keyframes close{
-    0%
-    {
+@keyframes close {
+    0% {
         display: block;
     }
 
-    100%
-    {
+    100% {
         height: 0;
         width: 0;
         display: none;
@@ -479,60 +458,153 @@ nav{
     }
 }
 
-
-@keyframes slideRight{
-    0%
-    {
+@keyframes slideRight {
+    0% {
         display: block;
     }
 
-    100%
-    {
+    100% {
         width: 0;
         display: none;
     }
 }
 
-
-@keyframes fadeLeft{
-    0%
-    {
+@keyframes fadeLeft {
+    0% {
         opacity: 1;
         transform: translateX(0);
     }
 
-    20%
-    {
+    20% {
         opacity: 0;
     }
 
-    100%
-    {
+    100% {
         opacity: 0;
         transform: translateX(-100%);
     }
-    
 }
 
-
-
-@keyframes fadeDown{
-    0%
-    {
+@keyframes fadeDown {
+    0% {
         opacity: 1;
         transform: translateY(0);
     }
 
-
-    30%
-    {
+    30% {
         opacity: 0;
     }
 
-
-    100%
-    {
+    100% {
         opacity: 0;
         transform: translateY(100%);
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    .logoImg {
+        width: 60px;
+    }
+
+    .loginFormContainer {
+        width: 80%;
+        height: 70%;
+    }
+
+    .heading h1 {
+        font-size: 4vmax;
+    }
+
+    .heading p {
+        font-size: 1.5vmax;
+    }
+
+    .loginBtn {
+        height: 50px;
+        padding: 10px;
+    }
+
+    .navUl {
+        flex-direction: column;
+    }
+
+    .navLi {
+        font-size: 0.9rem;
+    }
+
+    .dropdown-content {
+        left: 0;
+        top: 100%;
+        width: 100%;
+    }
+
+    .singleInpt {
+        padding: 20px 10px 10px 10px;
+    }
+
+    .showPassword {
+        right: 10px;
+        font-size: 0.9rem;
+    }
+
+    .inptLabel {
+        left: 15px;
+    }
+
+    .forgotPassword {
+        font-size: 1vmax;
+    }
+
+    .checkboxContainer input {
+        width: 20px;
+        height: 20px;
+    }
+
+    .foots {
+        font-size: 1vmax;
+    }
+}
+
+@media (max-width: 480px) {
+    .heading h1 {
+        font-size: 5vmax;
+    }
+
+    .heading p {
+        font-size: 2vmax;
+    }
+
+    .navUl {
+        display: none; 
+    }
+
+    .loginFormContainer {
+        width: 90%;
+        height: 80%;
+    }
+
+    .loginBtn {
+        height: 40px;
+    }
+
+    .singleInpt {
+        padding: 15px 10px 5px 10px;
+    }
+
+    .showPassword {
+        right: 5px;
+        font-size: 1rem;
+    }
+
+    .inptLabel {
+        font-size: 0.8rem;
+    }
+
+    .foots {
+        font-size: 1.2rem; 
     }
 }
